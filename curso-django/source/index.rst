@@ -7,12 +7,20 @@ Introducción a Desarrollo de Aplicaciones Web
 =============================================
 
 
-.. authors:: Defossé Nahuel, van Haaster Diego Marcos
+.. figure:: /_static/img/bg1.jpg
+    :class: fill
 
-Contenidos:
 
-.. toctree::
-   :maxdepth: 2
+..
+
+    .. authors:: Defossé Nahuel, van Haaster Diego Marcos
+
+    Contenidos:
+
+    .. toctree::
+       :maxdepth: 2
+
+
 
 
 Conceptos básicos de aplicaciones Web
