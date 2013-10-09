@@ -88,6 +88,19 @@ necesidades.
 ![estructura](images/django_architecture.png)
 
 ---
+ 
+# Funcionamiento
+
+.fx: bigbullets
+
+* El usuario pide una URL (por GET ó POST)
+* Django busca la primera URL que coincida con la solicitada (urls.py)
+* Se ejecuta la vista (función) a la que apunta esa URL (views.py)
+* En la vista se utilizan los models (modelos de datos) para consultar la BD
+* Los datos resultantes se introducen en la plantilla (templates)
+* Se devuleve una respuesta HTTP con el HTML generado
+
+---
 
 # Proyecto
 
@@ -121,3 +134,27 @@ necesidades.
 ## Abrimos http://localhost:8000
 
 ![runserver](images/runserver.png)
+
+---
+
+# Crear una app
+
+    !bash
+    python manage.py startapp myapp
+    
+## Estructura
+
+    !bash
+    mysite/
+        manage.py
+        myapp/
+            __init__.py
+            models.py
+            views.py
+            tests.py
+        mysite/
+            __init__.py
+            settings.py
+            urls.py
+            wsgi.py
+
