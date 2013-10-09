@@ -49,12 +49,40 @@ Una función:
     def saludar(nombre="pepe"):
         return "Hola %s" % nombre
 
+Una clase
 
+    !python
+
+    class Animal(object):
+        def __init__(self, nombre):
+            self.nombre = nombre
+
+        def saludar(self):
+            return "Hola! Soy %s" % self.nombre
+
+---
+
+# Ejemplo (cont)
+
+Un for:
+
+    !python
+
+    # Iterar sobre cosas
+    for s in ["casa", "pato", "pepe"]:
+        print "El numero es: %s" % s
+
+Otro for:
+
+    !python
+    numero = 4
+    for i in range(10):
+        print "%d x %d = %d" % (i, numero, numero*i)
 
 
 ---
 
-# Sintaxis
+# Sintaxis de objetos
 
 Los bloques de código están definidos mediante la indentación. No se usan las { ... }.
 
@@ -104,12 +132,126 @@ Los bloques de código están definidos mediante la indentación. No se usan las
 
 ---
 
+# Donde aprender más
+
+Existen muchos recursos en linea donde aprender...
+
+* Cursos Dicatados en años anteriores en la UNPSJB:
+
+    * <a href="http://www.slideshare.net/nahueldefosse/clase-1-curso-introduccin-a-python-2012"
+        target="_blank">Clase 1</a>
+    * <a href="http://www.slideshare.net/nahueldefosse/clase-1-curso-introduccin-a-python-2012-15552018"
+        target="_blank">Clase 2</a>
+    * <a href="http://www.slideshare.net/nahueldefosse/slides03-15552028"
+        target="_blank">Clase 3</a>
+    * <a href="http://www.slideshare.net/nahueldefosse/slides04-15552032"
+        target="_blank">Clase 4</a>
+
+* <a href="python.org.ar" target="_blank">Python Argentina</a>
+* <a href="http://python-no-muerde.googlecode.com/hg/python_no_muerde.pdf" target="_blank">
+    Python no muerde, yo si</a>
+* <a href="http://www.codecademy.com/tracks/python" target="_blank">
+    Sección de Python de *Code Academy*</a>
+* <a href="https://www.khanacademy.org/science/computer-science/" target="_blank">
+    Sección de Python de *Kahn Academy*</a>
+---
+
 # Gestión de proyectos
 
+---
+
+## Paquetes de Python
+
 Python tiene un gran número de paquetes disponibles más allá de los
-que nos brinda la librería estandard.
+que nos brinda la librería estandard y están disponibles en
+<a href="http://pypi.python.org" target="_blank" title="También llamado CheeseShop">PyPi</a>
+
+# Herramienta de Instalación
+
+La herramienta pip (e *easy_install*) sirven para instalar paquetes
+
+    !bash
+
+    $ pip install django
+    $ pip uninstall paquete
+    $ pip search facebook
+
+    $ pip install django-facebook-comments
+
+# Instalación global
+
+    !bash
+
+    sudo pip install django
 
 
+---
+
+# Virtualenv
 
 
+## Que resuelve?
+Sin embargo **no es recomendable instalar paquetes de python en el sistema**.
+Podemos pisar paquetes, o incluso tener conflictos con versiones de Python viejas.
 
+## Que hace?
+Virutalenv es un paquete que permite crear entornos virtuales, copiando la instalación
+de python en una carpte oculta dentro del directorio del usuario (típicamente ~/.virtualenvs).
+
+## Como se instala?
+    !bash
+
+    $ sudo pip install virtualenv virtualenvwrapper
+    $ echo "source /usr/local/bin/virtualenvwrapper.sh" > ~/.basrc
+
+Y cerramos la terminal.
+
+---
+
+# Virtualenv uso
+
+## Crear un ambiente
+
+    !bash
+
+    nahuel@lubuntu:~$ mkvirtualenv mi_proyecto
+
+    (mi_proyecto)nahuel@lubuntu:~$
+
+# Activar un ambiente
+
+    !bash
+    nahuel@lubuntu:~$ workon mi_proyecto
+    (mi_proyecto)nahuel@lubuntu:~$
+    # Si hacemos which python nos da el del virtualenv
+
+# Desactivar un ambiente
+
+    !bash
+    (mi_proyecto)nahuel@lubuntu:~$ deactivate
+    nahuel@lubuntu:~$  # Si hacemos which python nos da el del sistema
+
+# Paquetes del ambiente
+
+    !bash
+    (mi_proyecto)nahuel@lubuntu:~$ pip freeze # Listado de paquetes
+
+---
+
+# Virtualenv (cont)
+
+## Volcado de paquetes instalados
+
+    !bash
+    pip freeze > requirements.txt
+
+## Instalación de paquetes
+
+    !bash
+    pip install -r requirements.txt|
+
+## Notas
+
+*pip* funciona para paquetes que sean de código Python, pero existen paquetes que dependen
+de librerías de C. Las versiones de pip más nueva tienen la capacidad de bajar binarios,
+las versiones más viejas requieren la instalación de paquetes adicionales.
