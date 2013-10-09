@@ -137,6 +137,10 @@ necesidades.
 
 ---
 
+# Aplicación
+
+* Dentro del proyecto utilizamos **manage.py** para crear aplicaciones
+
 # Crear una app
 
     !bash

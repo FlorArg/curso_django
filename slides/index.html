@@ -1535,7 +1535,7 @@ r(go);
             </aside>
             
             <aside class="page_number">
-              1/25
+              1/31
             </aside>
           </footer>
         </div>
@@ -1576,7 +1576,7 @@ r(go);
             </aside>
             
             <aside class="page_number">
-              2/25
+              2/31
             </aside>
           </footer>
         </div>
@@ -1604,7 +1604,7 @@ r(go);
             </aside>
             
             <aside class="page_number">
-              3/25
+              3/31
             </aside>
           </footer>
         </div>
@@ -1636,7 +1636,7 @@ r(go);
             </aside>
             
             <aside class="page_number">
-              4/25
+              4/31
             </aside>
           </footer>
         </div>
@@ -1670,7 +1670,7 @@ r(go);
             </aside>
             
             <aside class="page_number">
-              5/25
+              5/31
             </aside>
           </footer>
         </div>
@@ -1707,7 +1707,7 @@ tienen un encabezado y un cuerpo separado por una línea en blanco.</p>
             </aside>
             
             <aside class="page_number">
-              6/25
+              6/31
             </aside>
           </footer>
         </div>
@@ -1745,7 +1745,7 @@ estar identificados por una <strong>dirección universal de recurso</strong>, o 
             </aside>
             
             <aside class="page_number">
-              7/25
+              7/31
             </aside>
           </footer>
         </div>
@@ -1793,7 +1793,7 @@ Cuando se envía información que genera o altera recursos se utiliza el método
             </aside>
             
             <aside class="page_number">
-              8/25
+              8/31
             </aside>
           </footer>
         </div>
@@ -1827,7 +1827,7 @@ Cuando se envía información que genera o altera recursos se utiliza el método
             </aside>
             
             <aside class="page_number">
-              9/25
+              9/31
             </aside>
           </footer>
         </div>
@@ -1855,7 +1855,7 @@ Cuando se envía información que genera o altera recursos se utiliza el método
             </aside>
             
             <aside class="page_number">
-              10/25
+              10/31
             </aside>
           </footer>
         </div>
@@ -1891,7 +1891,7 @@ Cuando se envía información que genera o altera recursos se utiliza el método
             </aside>
             
             <aside class="page_number">
-              11/25
+              11/31
             </aside>
           </footer>
         </div>
@@ -1934,7 +1934,7 @@ Cuando se envía información que genera o altera recursos se utiliza el método
             </aside>
             
             <aside class="page_number">
-              12/25
+              12/31
             </aside>
           </footer>
         </div>
@@ -1956,6 +1956,15 @@ Cuando se envía información que genera o altera recursos se utiliza el método
 <div class="highlight"><pre><span class="lineno">1</span> <span class="k">def</span> <span class="nf">saludar</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="s">&quot;pepe&quot;</span><span class="p">):</span>
 <span class="lineno">2</span>     <span class="k">return</span> <span class="s">&quot;Hola </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">nombre</span>
 </pre></div>
+
+<p>Una clase</p>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="k">class</span> <span class="nc">Animal</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="lineno">2</span>     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">):</span>
+<span class="lineno">3</span>         <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span>
+<span class="lineno">4</span> 
+<span class="lineno">5</span>     <span class="k">def</span> <span class="nf">saludar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="lineno">6</span>         <span class="k">return</span> <span class="s">&quot;Hola! Soy </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span>
+</pre></div>
 </section>
             
           </div>
@@ -1972,7 +1981,7 @@ Cuando se envía información que genera o altera recursos se utiliza el método
             </aside>
             
             <aside class="page_number">
-              13/25
+              13/31
             </aside>
           </footer>
         </div>
@@ -1983,7 +1992,48 @@ Cuando se envía información que genera o altera recursos se utiliza el método
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Sintaxis</h1></header>
+            <header><h1>Ejemplo (cont)</h1></header>
+            
+            
+            <section><p>Un for:</p>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="c"># Iterar sobre cosas</span>
+<span class="lineno">2</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&quot;casa&quot;</span><span class="p">,</span> <span class="s">&quot;pato&quot;</span><span class="p">,</span> <span class="s">&quot;pepe&quot;</span><span class="p">]:</span>
+<span class="lineno">3</span>     <span class="k">print</span> <span class="s">&quot;El numero es: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">s</span>
+</pre></div>
+
+<p>Otro for:</p>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="n">numero</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="lineno">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+<span class="lineno">3</span>     <span class="k">print</span> <span class="s">&quot;</span><span class="si">%d</span><span class="s"> x </span><span class="si">%d</span><span class="s"> = </span><span class="si">%d</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">numero</span><span class="p">,</span> <span class="n">numero</span><span class="o">*</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="sources/02_python.md">sources/02_python.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              14/31
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: sources/02_python.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Sintaxis de objetos</h1></header>
             
             
             <section><p>Los bloques de código están definidos mediante la indentación. No se usan las { ... }.</p>
@@ -2026,7 +2076,7 @@ Cuando se envía información que genera o altera recursos se utiliza el método
             </aside>
             
             <aside class="page_number">
-              14/25
+              15/31
             </aside>
           </footer>
         </div>
@@ -2071,7 +2121,7 @@ Cuando se envía información que genera o altera recursos se utiliza el método
             </aside>
             
             <aside class="page_number">
-              15/25
+              16/31
             </aside>
           </footer>
         </div>
@@ -2082,11 +2132,34 @@ Cuando se envía información que genera o altera recursos se utiliza el método
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Gestión de proyectos</h1></header>
+            <header><h1>Donde aprender más</h1></header>
             
             
-            <section><p>Python tiene un gran número de paquetes disponibles más allá de los
-que nos brinda la librería estandard.</p></section>
+            <section><p>Existen muchos recursos en linea donde aprender...</p>
+<ul>
+<li>
+<p>Cursos Dicatados en años anteriores en la UNPSJB:</p>
+<ul>
+<li><a href="http://www.slideshare.net/nahueldefosse/clase-1-curso-introduccin-a-python-2012"
+    target="_blank">Clase 1</a></li>
+<li><a href="http://www.slideshare.net/nahueldefosse/clase-1-curso-introduccin-a-python-2012-15552018"
+    target="_blank">Clase 2</a></li>
+<li><a href="http://www.slideshare.net/nahueldefosse/slides03-15552028"
+    target="_blank">Clase 3</a></li>
+<li><a href="http://www.slideshare.net/nahueldefosse/slides04-15552032"
+    target="_blank">Clase 4</a></li>
+</ul>
+</li>
+<li>
+<p><a href="python.org.ar" target="_blank">Python Argentina</a></p>
+</li>
+<li><a href="http://python-no-muerde.googlecode.com/hg/python_no_muerde.pdf" target="_blank">
+    Python no muerde, yo si</a></li>
+<li><a href="http://www.codecademy.com/tracks/python" target="_blank">
+    Sección de Python de <em>Code Academy</em></a></li>
+<li><a href="https://www.khanacademy.org/science/computer-science/" target="_blank">
+    Sección de Python de <em>Kahn Academy</em></a></li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -2102,7 +2175,212 @@ que nos brinda la librería estandard.</p></section>
             </aside>
             
             <aside class="page_number">
-              16/25
+              17/31
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: sources/02_python.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Gestión de proyectos</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="sources/02_python.md">sources/02_python.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              18/31
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: sources/02_python.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h2>Paquetes de Python</h2></header>
+            
+            
+            <section><p>Python tiene un gran número de paquetes disponibles más allá de los
+que nos brinda la librería estandard y están disponibles en
+<a href="http://pypi.python.org" target="_blank" title="También llamado CheeseShop">PyPi</a></p>
+<h1>Herramienta de Instalación</h1>
+<p>La herramienta pip (e <em>easy_install</em>) sirven para instalar paquetes</p>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="nv">$ </span>pip install django
+<span class="lineno">2</span> <span class="nv">$ </span>pip uninstall paquete
+<span class="lineno">3</span> <span class="nv">$ </span>pip search facebook
+<span class="lineno">4</span> 
+<span class="lineno">5</span> <span class="nv">$ </span>pip install django-facebook-comments
+</pre></div>
+
+<h1>Instalación global</h1>
+<div class="highlight"><pre><span class="lineno">1</span> sudo pip install django
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="sources/02_python.md">sources/02_python.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              19/31
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: sources/02_python.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Virtualenv</h1></header>
+            
+            
+            <section><h2>Que resuelve?</h2>
+<p>Sin embargo <strong>no es recomendable instalar paquetes de python en el sistema</strong>.
+Podemos pisar paquetes, o incluso tener conflictos con versiones de Python viejas.</p>
+<h2>Que hace?</h2>
+<p>Virutalenv es un paquete que permite crear entornos virtuales, copiando la instalación
+de python en una carpte oculta dentro del directorio del usuario (típicamente ~/.virtualenvs).</p>
+<h2>Como se instala?</h2>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="nv">$ </span>sudo pip install virtualenv virtualenvwrapper
+<span class="lineno">2</span> <span class="nv">$ </span><span class="nb">echo</span> <span class="s2">&quot;source /usr/local/bin/virtualenvwrapper.sh&quot;</span> &gt; ~/.basrc
+</pre></div>
+
+<p>Y cerramos la terminal.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="sources/02_python.md">sources/02_python.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              20/31
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: sources/02_python.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Virtualenv uso</h1></header>
+            
+            
+            <section><h2>Crear un ambiente</h2>
+<div class="highlight"><pre><span class="lineno">1</span> nahuel@lubuntu:~<span class="nv">$ </span>mkvirtualenv mi_proyecto
+<span class="lineno">2</span> 
+<span class="lineno">3</span> <span class="o">(</span>mi_proyecto<span class="o">)</span>nahuel@lubuntu:~<span class="err">$</span>
+</pre></div>
+
+<h1>Activar un ambiente</h1>
+<div class="highlight"><pre><span class="lineno">1</span> nahuel@lubuntu:~<span class="nv">$ </span>workon mi_proyecto
+<span class="lineno">2</span> <span class="o">(</span>mi_proyecto<span class="o">)</span>nahuel@lubuntu:~<span class="err">$</span>
+<span class="lineno">3</span> <span class="c"># Si hacemos which python nos da el del virtualenv</span>
+</pre></div>
+
+<h1>Desactivar un ambiente</h1>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="o">(</span>mi_proyecto<span class="o">)</span>nahuel@lubuntu:~<span class="nv">$ </span>deactivate
+<span class="lineno">2</span> nahuel@lubuntu:~<span class="nv">$ </span> <span class="c"># Si hacemos which python nos da el del sistema</span>
+</pre></div>
+
+<h1>Paquetes del ambiente</h1>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="o">(</span>mi_proyecto<span class="o">)</span>nahuel@lubuntu:~<span class="nv">$ </span>pip freeze <span class="c"># Listado de paquetes</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="sources/02_python.md">sources/02_python.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              21/31
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: sources/02_python.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Virtualenv (cont)</h1></header>
+            
+            
+            <section><h2>Volcado de paquetes instalados</h2>
+<div class="highlight"><pre><span class="lineno">1</span> pip freeze &gt; requirements.txt
+</pre></div>
+
+<h2>Instalación de paquetes</h2>
+<div class="highlight"><pre><span class="lineno">1</span> pip install -r requirements.txt|
+</pre></div>
+
+<h2>Notas</h2>
+<p><em>pip</em> funciona para paquetes que sean de código Python, pero existen paquetes que dependen
+de librerías de C. Las versiones de pip más nueva tienen la capacidad de bajar binarios,
+las versiones más viejas requieren la instalación de paquetes adicionales.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="sources/02_python.md">sources/02_python.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              22/31
             </aside>
           </footer>
         </div>
@@ -2130,7 +2408,7 @@ que nos brinda la librería estandard.</p></section>
             </aside>
             
             <aside class="page_number">
-              17/25
+              23/31
             </aside>
           </footer>
         </div>
@@ -2173,7 +2451,7 @@ Su nombre es en alusión al guitarrista de jazz gitano Django Reinhardt</p>
             </aside>
             
             <aside class="page_number">
-              18/25
+              24/31
             </aside>
           </footer>
         </div>
@@ -2238,7 +2516,7 @@ Su nombre es en alusión al guitarrista de jazz gitano Django Reinhardt</p>
             </aside>
             
             <aside class="page_number">
-              19/25
+              25/31
             </aside>
           </footer>
         </div>
@@ -2274,7 +2552,7 @@ necesidades.</p>
             </aside>
             
             <aside class="page_number">
-              20/25
+              26/31
             </aside>
           </footer>
         </div>
@@ -2309,7 +2587,7 @@ necesidades.</p>
             </aside>
             
             <aside class="page_number">
-              21/25
+              27/31
             </aside>
           </footer>
         </div>
@@ -2346,7 +2624,7 @@ necesidades.</p>
             </aside>
             
             <aside class="page_number">
-              22/25
+              28/31
             </aside>
           </footer>
         </div>
@@ -2394,7 +2672,7 @@ necesidades.</p>
             </aside>
             
             <aside class="page_number">
-              23/25
+              29/31
             </aside>
           </footer>
         </div>
@@ -2428,7 +2706,7 @@ necesidades.</p>
             </aside>
             
             <aside class="page_number">
-              24/25
+              30/31
             </aside>
           </footer>
         </div>
@@ -2439,10 +2717,14 @@ necesidades.</p>
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Crear una app</h1></header>
+            <header><h1>Aplicación</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="lineno">1</span> python manage.py startapp myapp
+            <section><ul>
+<li>Dentro del proyecto utilizamos <strong>manage.py</strong> para crear aplicaciones</li>
+</ul>
+<h1>Crear una app</h1>
+<div class="highlight"><pre><span class="lineno">1</span> python manage.py startapp myapp
 </pre></div>
 
 <h2>Estructura</h2>
@@ -2475,7 +2757,7 @@ necesidades.</p>
             </aside>
             
             <aside class="page_number">
-              25/25
+              31/31
             </aside>
           </footer>
         </div>
@@ -2568,74 +2850,111 @@ necesidades.</p>
       
       
       <tr id="toc-row-14">
-        <th><a href="#slide14">Sintaxis</a></th>
+        <th><a href="#slide14">Ejemplo (cont)</a></th>
         <td><a href="#slide14">14</a></td>
       </tr>
       
       
       <tr id="toc-row-15">
-        <th><a href="#slide15">Tipos de datos</a></th>
+        <th><a href="#slide15">Sintaxis de objetos</a></th>
         <td><a href="#slide15">15</a></td>
       </tr>
       
       
       <tr id="toc-row-16">
-        <th><a href="#slide16">Gestión de proyectos</a></th>
+        <th><a href="#slide16">Tipos de datos</a></th>
         <td><a href="#slide16">16</a></td>
       </tr>
       
       
       <tr id="toc-row-17">
-        <th><a href="#slide17">Django<blockquote><p>The Web framework for perfectionists with deadlines</p></blockquote></a></th>
+        <th><a href="#slide17">Donde aprender más</a></th>
         <td><a href="#slide17">17</a></td>
       </tr>
       
       
       <tr id="toc-row-18">
-        <th><a href="#slide18">Django</a></th>
+        <th><a href="#slide18">Gestión de proyectos</a></th>
         <td><a href="#slide18">18</a></td>
       </tr>
       
-      
-      <tr id="toc-row-19">
-        <th><a href="#slide19">Caracteristicas</a></th>
-        <td><a href="#slide19">19</a></td>
-      </tr>
+        
+        <tr id="toc-row-19" class="sub">
+          <th><a href="#slide19">Paquetes de Python</a></th>
+          <td><a href="#slide19">19</a></td>
+        </tr>
+        
       
       
       <tr id="toc-row-20">
-        <th><a href="#slide20">Un framework</a></th>
+        <th><a href="#slide20">Virtualenv</a></th>
         <td><a href="#slide20">20</a></td>
       </tr>
       
       
       <tr id="toc-row-21">
-        <th><a href="#slide21">Patron MTV</a></th>
+        <th><a href="#slide21">Virtualenv uso</a></th>
         <td><a href="#slide21">21</a></td>
       </tr>
       
       
       <tr id="toc-row-22">
-        <th><a href="#slide22">Funcionamiento</a></th>
+        <th><a href="#slide22">Virtualenv (cont)</a></th>
         <td><a href="#slide22">22</a></td>
       </tr>
       
       
       <tr id="toc-row-23">
-        <th><a href="#slide23">Proyecto</a></th>
+        <th><a href="#slide23">Django<blockquote><p>The Web framework for perfectionists with deadlines</p></blockquote></a></th>
         <td><a href="#slide23">23</a></td>
       </tr>
       
       
       <tr id="toc-row-24">
-        <th><a href="#slide24">Servidor de desarrollo</a></th>
+        <th><a href="#slide24">Django</a></th>
         <td><a href="#slide24">24</a></td>
       </tr>
       
       
       <tr id="toc-row-25">
-        <th><a href="#slide25">Crear una app</a></th>
+        <th><a href="#slide25">Caracteristicas</a></th>
         <td><a href="#slide25">25</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-26">
+        <th><a href="#slide26">Un framework</a></th>
+        <td><a href="#slide26">26</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-27">
+        <th><a href="#slide27">Patron MTV</a></th>
+        <td><a href="#slide27">27</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-28">
+        <th><a href="#slide28">Funcionamiento</a></th>
+        <td><a href="#slide28">28</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-29">
+        <th><a href="#slide29">Proyecto</a></th>
+        <td><a href="#slide29">29</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-30">
+        <th><a href="#slide30">Servidor de desarrollo</a></th>
+        <td><a href="#slide30">30</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-31">
+        <th><a href="#slide31">Aplicación</a></th>
+        <td><a href="#slide31">31</a></td>
       </tr>
       
       
