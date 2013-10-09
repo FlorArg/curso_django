@@ -65,47 +65,27 @@ Google AppEngine, Nasa, Bitbucket.org, Disqus, Instagram, ...
 
 ---
 
-# Patron MTV
+# Un framework
+
+Un programador utilizar generalmente librerías que están
+incluidas en su lenguaje y muchas veces librerías de
+externos que proveen funcionalidad adicional a su porgrama.
+
+Un framework brinda el *programa* y tiene un comportamiento
+definido que el programdor modifica para adaptarlo a sus
+necesidades.
+
+![framework](images/architecture-framework-libraries.png)
 
 ---
 
-¿COMO TRABAJA?
+# Estructura de Django
 
-1. La aplicación recibe una petición por medio de URLconf,
+![estructura](images/django_architecture.png)
 
-2. URLconf envia a la vista dicha petición.
+---
 
-3. La vista tiene dos posibilidades,
-
-- enviar a la Plantilla entregue algo al cliente
-
-- solicitar información del Modelo, renderizar con la plantilla y finalmente se le entrega al cliente.
-
-4. el modelo interactua con la base de datos por medio de ORM
-
-Esquema MTV de Django
-
-Presenter Notes
-
-Source: django.md
-13/21
-OTROS COMPONENTES
-
-Servidor web ligero para desarrollo y pruebas de aplicaciones
-
-Interfaz de administración automática
-
-Sistema de fomularios
-
-Sistema de autenticación / autorizacion
-
-Internacionalización
-
-Sistema caché
-
-Framework de sindicación
-
-Framework testing unitario y funcional
+# Patron MTV
 
 ---
 
@@ -124,7 +104,7 @@ Framework testing unitario y funcional
 
     !bash
     mysite/
-        manage.py        
+        manage.py
         mysite/
             __init__.py
             settings.py
@@ -134,7 +114,7 @@ Framework testing unitario y funcional
 ---
 
 # Servidor de desarrollo
-    
+
     !bash
     python manage.py runserver
 

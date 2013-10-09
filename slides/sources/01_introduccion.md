@@ -117,16 +117,3 @@ Cuando se envía información que genera o altera recursos se utiliza el método
 <img src="images/servidores.png">
 
 
----
-
-# Que es una framework
-
-Un programador utilizar generalmente librerías que están
-incluidas en su lenguaje y muchas veces librerías de
-externos que proveen funcionalidad adicional a su porgrama.
-
-Un framework brinda el *programa* y tiene un comportamiento
-definido que el programdor modifica para adaptarlo a sus
-necesidades.
-
-![framework](images/architecture-framework-libraries.png)
