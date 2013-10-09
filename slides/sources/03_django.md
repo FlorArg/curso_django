@@ -30,8 +30,6 @@
 
 # Servidor de desarrollo
     
-
-
     !bash
     python manage.py runserver
 
