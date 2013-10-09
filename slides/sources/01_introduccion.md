@@ -1,6 +1,6 @@
-# Introducción al desarrollo de aplicaciones web
+# Introducción al desarrollo de aplicaciones web<br /><small>Utilizando el framework Django</small>
 
-.fx: home
+.fx: title
 
 # Presenter Notes
 
@@ -10,58 +10,20 @@ Arrancamos
 
 # Bienvenidos
 
-Defossé Nahuel, van Haaster Diego Marcos
+## Autores
 
-----
+### Defossé Nahuel
 
-# Python
+nahuel.defosse@gmail.com @d3f0
 
-.fx: bigbullet
+### van Haaster Diego Marcos
 
-* Interpretado
-* Multiparadigma
-* Tipado dinámico
-* Interactivo
+diegomvh@gmail.com @diegomvh
 
----
+## Curso
 
-# Python - Sintaxis
+6 clases teórico-prácticas de 2:30hs cada clase.
 
-Los bloques de código están definidos mediante la indentación. No se usan las { ... }.
-
-    !python
-    class Django(object):
-        def do_my_webapp(self):
-            print("develop, develop, develop")
-    
-    if __name__ == "__main__":
-        dj = Django()
-        dj.do_my_webapp()
-        
----
-
-# Python - Tipos de datos
-
-    !python
-    # Cadenas
-    ref = "nombre"
-    
-    # Numeros
-    num = 1
-
-    # Tuplas
-    ( 1, 2, ref )
-
-    # Listas
-    [ num, 2, "edad", True, False ]
-    
-    # Diccionarios
-    { "nombre": "Pepe", "edad": 28 }
-
----
-
-# Django
-
-.fx: centerquote
-
-> The Web framework for perfectionists with deadlines
+* Aplicaciones web 
+* Lenguaje Python
+* Framework Django

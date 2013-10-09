@@ -30,6 +30,10 @@ pre {
   border-radius: 10px;
 }
 
+blockquote {
+    border-left: 0px;
+}
+
 p code, li code {
   color: #487858;
 }
@@ -64,15 +68,6 @@ aside {
   bottom: 16px;
 }
 
-div.slide.home section {
-  margin-top: 55px;
-}
-
-div.slide.home img {
-  width: 80%;
-  margin-left: 80px;
-}
-
 div.slide.title header {
   background: #092d1f;
   border-radius: 10px;
@@ -82,12 +77,17 @@ div.slide.title header h1 {
   color: #fff;
 }
 
+div.slide.title blockquote p {
+    color: #fff;
+    font-size: 0.8em;
+}
+
 div.slide blockquote p {
   color: #444;
   font-family: Georgia, serif;
-  font-size: 2em;
+  font-size: 1.2em;
   font-style: italic;
-  line-height: 1.4em;
+  line-height: 1em;
   text-align: center;
 }
 
