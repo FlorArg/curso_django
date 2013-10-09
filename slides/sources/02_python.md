@@ -36,9 +36,20 @@ Se lo suele clasificar como:
 
 # Ejemplo
 
+El hola mundo:
+
     !python
 
     print "Hola mundo"
+
+Una función:
+
+    !python
+
+    def saludar(nombre="pepe"):
+        return "Hola %s" % nombre
+
+
 
 
 ---
