@@ -80,7 +80,7 @@
             </aside>
             
             <aside class="page_number">
-              1/13
+              1/14
             </aside>
           </footer>
         </div>
@@ -121,7 +121,7 @@
             </aside>
             
             <aside class="page_number">
-              2/13
+              2/14
             </aside>
           </footer>
         </div>
@@ -153,7 +153,7 @@
             </aside>
             
             <aside class="page_number">
-              3/13
+              3/14
             </aside>
           </footer>
         </div>
@@ -164,11 +164,10 @@
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Cliente</h1></header>
+            <header><h1>Cliente - Browser</h1></header>
             
             
             <section><ul>
-<li>Web Browser</li>
 <li>HTTP, CSS, Javascript</li>
 <li>Firefox, Chrome, Opera, Explorer</li>
 </ul></section>
@@ -187,7 +186,7 @@
             </aside>
             
             <aside class="page_number">
-              4/13
+              4/14
             </aside>
           </footer>
         </div>
@@ -195,17 +194,20 @@
       
       <!-- slide source: sources/01_introduccion.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Servidor</h1></header>
+            <header><h1>Protocolo - HTTP</h1></header>
             
             
-            <section><ul>
-<li>Web Server</li>
-<li>Common Gateway Interface</li>
-<li>Apache, Nginx</li>
-</ul></section>
+            <section><p>HTTP es la forma en que navegador dialoga con el servidor recuperando recursos o enviando información.</p>
+<p>Es un protocolo de <em>texto plano</em>, donde tanto las peticiones como las respuestas
+tienen un encabezado y un cuerpo separado por una línea en blanco.</p>
+<p>Los recursos se localizan mediante URLs, que tiene la forma:</p>
+<div class="highlight"><pre><span class="lineno">1</span> http://miservidor.com.ar/imagenes/imagen.jpg
+<span class="lineno">2</span> http://localhost:8000/sistema?buscar=pepe&amp;dni=30222111
+</pre></div>
+</section>
             
           </div>
           <div class="presenter_notes">
@@ -221,7 +223,7 @@
             </aside>
             
             <aside class="page_number">
-              5/13
+              5/14
             </aside>
           </footer>
         </div>
@@ -232,13 +234,12 @@
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Protocolo</h1></header>
+            <header><h1>Métodos HTTP</h1></header>
             
             
-            <section><ul>
-<li>HTTP</li>
-<li>Texto</li>
-</ul>
+            <section><p>Cada vez que se envía una consulta, el navegador especifica un método o verbo.
+Cuando se piden recursos o se hacen consultas se utiliza el método <strong>GET</strong>.
+Cuando se envía información que genera o altera recursos se utiliza el método <strong>POST</strong>.</p>
 <h2>Request</h2>
 <div class="highlight"><pre><span class="lineno">1</span> GET HTTP://www.google.com.ar HTTP/1.1
 <span class="lineno">2</span> Host: www.google.com.ar
@@ -270,7 +271,40 @@
             </aside>
             
             <aside class="page_number">
-              6/13
+              6/14
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: sources/01_introduccion.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Servidor - Web Server</h1></header>
+            
+            
+            <section><ul>
+<li>Common Gateway Interface</li>
+<li>Apache, Nginx</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="sources/01_introduccion.md">sources/01_introduccion.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/14
             </aside>
           </footer>
         </div>
@@ -298,7 +332,7 @@
             </aside>
             
             <aside class="page_number">
-              7/13
+              8/14
             </aside>
           </footer>
         </div>
@@ -333,7 +367,7 @@
             </aside>
             
             <aside class="page_number">
-              8/13
+              9/14
             </aside>
           </footer>
         </div>
@@ -372,7 +406,7 @@
             </aside>
             
             <aside class="page_number">
-              9/13
+              10/14
             </aside>
           </footer>
         </div>
@@ -417,7 +451,7 @@
             </aside>
             
             <aside class="page_number">
-              10/13
+              11/14
             </aside>
           </footer>
         </div>
@@ -445,7 +479,7 @@
             </aside>
             
             <aside class="page_number">
-              11/13
+              12/14
             </aside>
           </footer>
         </div>
@@ -493,7 +527,7 @@
             </aside>
             
             <aside class="page_number">
-              12/13
+              13/14
             </aside>
           </footer>
         </div>
@@ -527,7 +561,7 @@
             </aside>
             
             <aside class="page_number">
-              13/13
+              14/14
             </aside>
           </footer>
         </div>
@@ -560,62 +594,68 @@
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide4">Cliente</a></th>
+        <th><a href="#slide4">Cliente - Browser</a></th>
         <td><a href="#slide4">4</a></td>
       </tr>
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide5">Servidor</a></th>
+        <th><a href="#slide5">Protocolo - HTTP</a></th>
         <td><a href="#slide5">5</a></td>
       </tr>
       
       
       <tr id="toc-row-6">
-        <th><a href="#slide6">Protocolo</a></th>
+        <th><a href="#slide6">Métodos HTTP</a></th>
         <td><a href="#slide6">6</a></td>
       </tr>
       
       
       <tr id="toc-row-7">
-        <th><a href="#slide7">Python<blockquote><p>An interactive, object-oriented, extensible programming language</p></blockquote></a></th>
+        <th><a href="#slide7">Servidor - Web Server</a></th>
         <td><a href="#slide7">7</a></td>
       </tr>
       
       
       <tr id="toc-row-8">
-        <th><a href="#slide8">Caracteristicas</a></th>
+        <th><a href="#slide8">Python<blockquote><p>An interactive, object-oriented, extensible programming language</p></blockquote></a></th>
         <td><a href="#slide8">8</a></td>
       </tr>
       
       
       <tr id="toc-row-9">
-        <th><a href="#slide9">Sintaxis</a></th>
+        <th><a href="#slide9">Caracteristicas</a></th>
         <td><a href="#slide9">9</a></td>
       </tr>
       
       
       <tr id="toc-row-10">
-        <th><a href="#slide10">Tipos de datos</a></th>
+        <th><a href="#slide10">Sintaxis</a></th>
         <td><a href="#slide10">10</a></td>
       </tr>
       
       
       <tr id="toc-row-11">
-        <th><a href="#slide11">Django<blockquote><p>The Web framework for perfectionists with deadlines</p></blockquote></a></th>
+        <th><a href="#slide11">Tipos de datos</a></th>
         <td><a href="#slide11">11</a></td>
       </tr>
       
       
       <tr id="toc-row-12">
-        <th><a href="#slide12">Proyecto</a></th>
+        <th><a href="#slide12">Django<blockquote><p>The Web framework for perfectionists with deadlines</p></blockquote></a></th>
         <td><a href="#slide12">12</a></td>
       </tr>
       
       
       <tr id="toc-row-13">
-        <th><a href="#slide13">Servidor de desarrollo</a></th>
+        <th><a href="#slide13">Proyecto</a></th>
         <td><a href="#slide13">13</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-14">
+        <th><a href="#slide14">Servidor de desarrollo</a></th>
+        <td><a href="#slide14">14</a></td>
       </tr>
       
       

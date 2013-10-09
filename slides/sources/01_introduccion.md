@@ -38,26 +38,33 @@ diegomvh@gmail.com @diegomvh
 
 ---
 
-# Cliente
+# Cliente - Browser
     
-* Web Browser
 * HTTP, CSS, Javascript
 * Firefox, Chrome, Opera, Explorer
 
 ---
- 
-# Servidor
-
-* Web Server
-* Common Gateway Interface
-* Apache, Nginx
   
+# Protocolo - HTTP
+
+HTTP es la forma en que navegador dialoga con el servidor recuperando recursos o enviando información.
+
+Es un protocolo de *texto plano*, donde tanto las peticiones como las respuestas
+tienen un encabezado y un cuerpo separado por una línea en blanco.
+
+Los recursos se localizan mediante URLs, que tiene la forma:
+
+    !text
+    http://miservidor.com.ar/imagenes/imagen.jpg
+    http://localhost:8000/sistema?buscar=pepe&dni=30222111
+
 ---
-  
-# Protocolo
 
-* HTTP
-* Texto
+# Métodos HTTP
+
+Cada vez que se envía una consulta, el navegador especifica un método o verbo.
+Cuando se piden recursos o se hacen consultas se utiliza el método **GET**.
+Cuando se envía información que genera o altera recursos se utiliza el método **POST**.
 
 ## Request
 
@@ -76,3 +83,10 @@ diegomvh@gmail.com @diegomvh
     Set-Cookie: ....
 
     <!doctype html><html itemscope=""...
+
+---
+ 
+# Servidor - Web Server
+
+* Common Gateway Interface
+* Apache, Nginx
