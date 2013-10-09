@@ -49,12 +49,40 @@ Una función:
     def saludar(nombre="pepe"):
         return "Hola %s" % nombre
 
+Una clase
 
+    !python
+
+    class Animal(object):
+        def __init__(self, nombre):
+            self.nombre = nombre
+
+        def saludar(self):
+            return "Hola! Soy %s" % self.nombre
+
+---
+
+# Ejemplo (cont)
+
+Un for:
+
+    !python
+
+    # Iterar sobre cosas
+    for s in ["casa", "pato", "pepe"]:
+        print "El numero es: %s" % s
+
+Otro for:
+
+    !python
+    numero = 4
+    for i in range(10):
+        print "%d x %d = %d" % (i, numero, numero*i)
 
 
 ---
 
-# Sintaxis
+# Sintaxis de objetos
 
 Los bloques de código están definidos mediante la indentación. No se usan las { ... }.
 
@@ -102,6 +130,30 @@ Los bloques de código están definidos mediante la indentación. No se usan las
     # Diccionarios
     { "nombre": "Pepe", "edad": 28 }
 
+---
+
+# Donde aprender más
+
+Existen muchos recursos en linea donde aprender...
+
+* Cursos Dicatados en años anteriores en la UNPSJB:
+
+    * <a href="http://www.slideshare.net/nahueldefosse/clase-1-curso-introduccin-a-python-2012"
+        target="_blank">Clase 1</a>
+    * <a href="http://www.slideshare.net/nahueldefosse/clase-1-curso-introduccin-a-python-2012-15552018"
+        target="_blank">Clase 2</a>
+    * <a href="http://www.slideshare.net/nahueldefosse/slides03-15552028"
+        target="_blank">Clase 3</a>
+    * <a href="http://www.slideshare.net/nahueldefosse/slides04-15552032"
+        target="_blank">Clase 4</a>
+
+* <a href="python.org.ar" target="_blank">Python Argentina</a>
+* <a href="http://python-no-muerde.googlecode.com/hg/python_no_muerde.pdf" target="_blank">
+    Python no muerde, yo si</a>
+* <a href="http://www.codecademy.com/tracks/python" target="_blank">
+    Sección de Python de *Code Academy*</a>
+* <a href="https://www.khanacademy.org/science/computer-science/" target="_blank">
+    Sección de Python de *Kahn Academy*</a>
 ---
 
 # Gestión de proyectos
