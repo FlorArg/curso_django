@@ -79,13 +79,13 @@ necesidades.
 
 ---
 
-# Estructura de Django
+# Patron MTV
+
+* Model → modelo de datos (models.py)
+* View → vistas de datos (views.py)
+* Template → plantillas de páginas (generalmente archivos HTML)
 
 ![estructura](images/django_architecture.png)
-
----
-
-# Patron MTV
 
 ---
 
