@@ -18,14 +18,29 @@
 Los bloques de código están definidos mediante la indentación. No se usan las { ... }.
 
     !python
-    class Django(object):
-        def do_my_webapp(self):
-            print("develop, develop, develop")
+    import sys
     
+    class Django(Framework):
+        def __init__(self, name):
+            self.name = name
+            print("Project %s created" % name)
+
+        @classmethod
+        def startproject(cls, name):
+            return cls(name)
+
+    class MySite(Django):
+        def runserver(self):
+            print("%s is running" % self.name)
+            return 0
+            
+    def main(argv = sys.argv):
+        mysite = MySite.startproject("mysite")
+        return mysite.runserver()
+
     if __name__ == "__main__":
-        dj = Django()
-        dj.do_my_webapp()
-        
+        sys.exit(main())
+
 ---
 
 # Tipos de datos

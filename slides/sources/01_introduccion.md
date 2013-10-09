@@ -39,7 +39,7 @@ diegomvh@gmail.com @diegomvh
 ---
 
 # Cliente - Browser
-    
+
 * HTTP, CSS, Javascript
 * Firefox, Chrome, Opera, Explorer
 
