@@ -180,3 +180,19 @@ p.cop strong {
 p.cop a {
   color: #ffe971;
 }
+
+dt, dl {
+  font: 20px "Calibri", "Trebuchet MS", Verdana, sans-serif;
+}
+
+dl {
+  margin-bottom: 1em;
+}
+
+dt {
+  font-weight: bolder;
+  margin-top: 5px;
+}
+.highlight > pre {
+  background: #98C088;
+}
