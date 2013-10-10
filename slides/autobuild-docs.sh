@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CMD="landslide config.cfg"
+CMD="landslide clase_01.cfg"
 
 function check_installed {
     which $1 >/dev/null
