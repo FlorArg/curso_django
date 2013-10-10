@@ -22,11 +22,16 @@ diegomvh@gmail.com @diegomvh
 
 ## Curso
 
-6 clases teórico-prácticas de 2:30hs cada clase.
+6 clases teórico-prácticas de 2hs cada clase.
 
-* Aplicaciones web 
+* Aplicaciones web
 * Lenguaje Python
 * Framework Django
+
+---
+
+# Plataforma
+
 
 ---
 
@@ -43,8 +48,11 @@ diegomvh@gmail.com @diegomvh
 * HTTP, CSS, Javascript
 * Firefox, Chrome, Opera, Explorer
 
+<img src="images/browsers.jpg">
+
+
 ---
-  
+
 # Protocolo - HTTP
 
 HTTP es la forma en que navegador dialoga con el servidor recuperando recursos o enviando información.
@@ -57,6 +65,21 @@ Los recursos se localizan mediante URLs, que tiene la forma:
     !text
     http://miservidor.com.ar/imagenes/imagen.jpg
     http://localhost:8000/sistema?buscar=pepe&dni=30222111
+
+---
+
+# URLs
+
+Los recursos a los que se puede acceder meidiante uns servidor web deben
+estar identificados por una **dirección universal de recurso**, o URL.
+
+Una URL identifica:
+
+* donde (dirección del servidor)
+* que recurso (ej: un archivo)
+* una consulta y una ubicación en un documento
+<img src="images/url.gif">
+
 
 ---
 
@@ -85,8 +108,25 @@ Cuando se envía información que genera o altera recursos se utiliza el método
     <!doctype html><html itemscope=""...
 
 ---
- 
+
 # Servidor - Web Server
 
 * Common Gateway Interface
 * Apache, Nginx
+
+<img src="images/servidores.png">
+
+
+---
+
+# Que es una framework
+
+Un programador utilizar generalmente librerías que están
+incluidas en su lenguaje y muchas veces librerías de
+externos que proveen funcionalidad adicional a su porgrama.
+
+Un framework brinda el *programa* y tiene un comportamiento
+definido que el programdor modifica para adaptarlo a sus
+necesidades.
+
+![framework](images/architecture-framework-libraries.png)
