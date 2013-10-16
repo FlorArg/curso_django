@@ -9,15 +9,14 @@
 
 .fx: smallbullet
 
-Los modelos encapsulan la información referente al dominio de la aplicacion web.
-Compuestos por campos generalemnte cada modelo mapea a una unica tabla de la base de datos.
+Los modelos encapsulan la información referente al dominio de la aplicación web.
+Compuestos por campos generalmente cada modelo mapea a una única tabla de la base de datos.
 
 * Cada modelo es una clase en Python que hereda de django.db.models.Model.
 
 * Cada atributo del modelo se corresponde con una columna en la base de datos.
 
-* Con esto Django genera automaticamente una API de acceso a datos.
-
+* Con esto Django genera automáticamente una API de acceso a datos.
 
 ## Bases de datos
 
@@ -27,7 +26,6 @@ Existen otros backends creados por la comunidad para Firebird, ODBC, SQL Server 
 de datos no relacionales.
 
 ---
-
 
 # Modelos - Campos
 
@@ -158,8 +156,8 @@ Y esto sin contar los índices!
 
 # Modelos - Uso
 
-
-Los modelos tiene herdean muchos métodos de *models.Model*, como save() y delete()
+Los modelos herdean el comportamiento de *models.Model*, métodos como **save** y
+**delete** ya están disponibles para ser utilizados.
 
     !python
 
@@ -212,7 +210,6 @@ Los modelos tiene herdean muchos métodos de *models.Model*, como save() y delet
                 verbose_name = "Registro de actividad"
                 verbose_name_plural = "Registros de actividad"
                 ordering = '-fecha'
-
 
 ---
 

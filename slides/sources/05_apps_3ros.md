@@ -15,8 +15,7 @@ Si bien django provee un buen número de características como
 * <a href="http://bebblebrox.files.wordpress.com/2011/01/geodjango-pav-admin.png">GIS</a>
 * <a href="http://django-dynamic-scraper.readthedocs.org/en/latest/_images/screenshot_django-admin_overview.png">Administración automática (y extensible)</a>
 
-
-disponemos de muchos paquetes de 3ros que se instalan con **pip** y
+Disponemos de muchos paquetes de 3ros que se instalan con **pip** y
 proveen extensiones, comandos, template tags, vistas genericas, etc.
 
 ---
@@ -29,32 +28,32 @@ Las aplicaciones de terceros ahorran mucho tiempo.
 
 ---
 
-# Migración de modelos - South
+# South
 
 ---
 
-# Que hace?
+# Que es?
 
-Permite manejar versiones de base de datos. Faclita el desarrollo iterativo incremental,
-permitiendo aumentar minimizar el uso de SQL al momento de modificar los modelos.
+South es una herramienta de migración de datos, permite gestionar el cambio
+en nuestros modelos desde un nivel de abstracción alto, minimizando de esta
+manera el uso de SQL.
 
-Provee comandos de **manage.py** para:
+Agrega commandos en **manage.py** para trabajar dichos cambios:
 
-1. Analiza las diferencias entre models.py y la base de datos
-   y genera un script de migración
+1. Analiza las diferencias entre models.py y la base de datos y genera un
+script de migración
 
 2. Aplica o desaplica migraciones de esquema (estructura)
 
 3. Convierte aplicaciones que no usen South, en aplicaciones con South
 
-4. Aplica o desaplica migraciones de datos (estructura)
+4. Aplica o desaplica migraciones de datos
 
 2 y 4 son transparentes
 
-
 ---
 
-# Instalación
+# Instalación y Uso
 
 Se instala con pip en nuestro ambiente
 
@@ -66,37 +65,47 @@ Se agrega como una aplicación instalada en setting.py en la lista de **INSTALLE
 
     !python
 
-    INSTALLED_APPS = (
-        ...
-        'south',
-    )
-
----
+    INSTALLED_APPS = ( 'south', )
+    
+Comandos basicos
 
     !bash
 
     # Convertir a South
     python manage.py convert_to_south common
-
     # Crear una migración
     python manage.py schemamigration common --auto
-
     # Aplicar una migración
     python manage.py migrate common
-
     # Listar
     python manage.py migrate common --list
-
     # Vovler a algún estado de la base de atos
     python manage.py migrate common 001
-
-
 
 ---
 
 # Django Debug Toolbar
 
 .fx: title
+
+---
+
+# Que es?
+
+Es una coleccion de paneles configurables que presenta mucha informacion de debug
+referida al request/response en curso.
+
+## Que podemos ver dentro de toda esa informacion:
+
+1. La vesion de Django
+2. El tiempo de Request
+3. Las configuraciones en settings.py
+4. Los encabezados HTTP
+5. Las variables de GET/POST/cookie/session
+6. Las plantillas y los contextos usados para generar el HTML
+7. Las consultas en SQL, sus tiempos y la explicacion de cada una
+8. Las señales emitidas
+9. Los logs emitidos por el modulo de logging configurado en Django
 
 ---
 
@@ -131,7 +140,6 @@ Modificamos settings.py para agregar la aplicacion, el middleware y algo de segu
 
 # Configuracion
 
-
 En settings.py
 
     !python
@@ -153,6 +161,7 @@ En settings.py
         'SHOW_TOOLBAR_CALLBACK': lambda request: True,
         'EXTRA_SIGNALS': ['myproject.signals.MySignal'],
         'HIDE_DJANGO_SQL': False,
+        'SHOW_TEMPLATE_CONTEXT': True,
         'TAG': 'div',
         'ENABLE_STACKTRACES' : True,
     }

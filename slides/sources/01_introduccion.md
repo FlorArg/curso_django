@@ -38,7 +38,7 @@ diegomvh@gmail.com @diegomvh
 
 # Cliente - Browser
 
-* HTTP, CSS, Javascript
+* HTML, CSS, Javascript
 * Firefox, Chrome, Opera, Explorer
 
 <img src="images/browsers.jpg">
