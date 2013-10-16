@@ -88,7 +88,7 @@ necesidades.
 ![estructura](images/django_architecture.png)
 
 ---
- 
+
 # Funcionamiento
 
 .fx: bigbullets
@@ -145,7 +145,7 @@ necesidades.
 
     !bash
     python manage.py startapp myapp
-    
+
 ## Estructura
 
     !bash

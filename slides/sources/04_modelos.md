@@ -110,7 +110,11 @@ de datos no relacionales.
     !bash
     python manage.py syncdb
 
-    0 errors found
+    Creating table common_persona
+    Creating table common_mascota
+    Creating table common_especie
+    Creating table common_raza
+
 
 ---
 
@@ -182,6 +186,36 @@ Los modelos tiene herdean muchos métodos de *models.Model*, como save() y delet
 
 ---
 
+# Otras opciones para los modelos
+
+1. Al ser clases los modelos pueden tener métodos que efectuen alguna acción en función
+   de los datos que contengan, por ejemplo, la representación como cadena:
+
+
+        !python
+
+        class Persona(models.Model):
+            nombre = models.CharField(max_length=50)
+            def __unicode__(self):
+                return "Soy %s" % self.nombre
+
+2. <a href="https://docs.djangoproject.com/en/1.5/ref/models/options/">
+    Metainformación</a>
+    Permite agregar información como el nombre de la tabla en la base de datos,
+    una etiqueta de texto, orden por defecto, restricciones de unicidad, etc.
+
+        !python
+
+        class Registro(models.Model):
+            fecha = models.DateField()
+            class Meta:
+                verbose_name = "Registro de actividad"
+                verbose_name_plural = "Registros de actividad"
+                ordering = '-fecha'
+
+
+---
+
 # Managers
 
 Django provee una propiedad en todos los modelos que
@@ -198,7 +232,8 @@ nos permite hacer SELECT, INSERT, UPDATE y DELETE muy facilmente.
     mascotas.filter(raza=Raza).delete()
 
 ---
-#Managers (cont)
+
+# Managers (cont)
 
 <img src="images/perezoso.jpg">
 
