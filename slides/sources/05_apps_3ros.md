@@ -54,7 +54,7 @@ Provee comandos de **manage.py** para:
 
 ---
 
-# Instalación y uso
+# Instalación
 
 Se instala con pip en nuestro ambiente
 
@@ -70,7 +70,6 @@ Se agrega como una aplicación instalada en setting.py en la lista de **INSTALLE
         ...
         'south',
     )
-
 
 ---
 
@@ -97,5 +96,63 @@ Se agrega como una aplicación instalada en setting.py en la lista de **INSTALLE
 
 # Django Debug Toolbar
 
+.fx: title
+
 ---
 
+# Instalación
+
+Instalacion con pip
+
+    !bash
+
+    pip install django-debug-toolbar
+
+Modificamos settings.py para agregar la aplicacion, el middleware y algo de seguridad.
+
+    !python
+
+    INSTALLED_APPS = (
+        ...
+        'debug_toolbar',
+    )
+
+    # El orden es imporatante, debe estar despues de los middlewares que apliquen algun encoding sobre el response
+    MIDDLEWARE_CLASSES = (
+        # ...
+        'debug_toolbar.middleware.DebugToolbarMiddleware',
+        # ...
+    )
+    
+    # Solo para localhost
+    INTERNAL_IPS = ('127.0.0.1',)
+
+---
+
+# Configuracion
+
+
+En settings.py
+
+    !python
+
+    DEBUG_TOOLBAR_PANELS = (
+        'debug_toolbar.panels.version.VersionDebugPanel',
+        'debug_toolbar.panels.timer.TimerDebugPanel',
+        'debug_toolbar.panels.settings_vars.SettingsVarsDebugPanel',
+        'debug_toolbar.panels.headers.HeaderDebugPanel',
+        'debug_toolbar.panels.request_vars.RequestVarsDebugPanel',
+        'debug_toolbar.panels.template.TemplateDebugPanel',
+        'debug_toolbar.panels.sql.SQLDebugPanel',
+        'debug_toolbar.panels.signals.SignalDebugPanel',
+        'debug_toolbar.panels.logger.LoggingPanel',
+    )
+    
+    DEBUG_TOOLBAR_CONFIG = {
+        'INTERCEPT_REDIRECTS': False,
+        'SHOW_TOOLBAR_CALLBACK': lambda request: True,
+        'EXTRA_SIGNALS': ['myproject.signals.MySignal'],
+        'HIDE_DJANGO_SQL': False,
+        'TAG': 'div',
+        'ENABLE_STACKTRACES' : True,
+    }
