@@ -8,12 +8,13 @@
 
 Si bien django provee un buen numero de características como
 
-* ORM
+* <a href="https://docs.djangoproject.com/en/1.5/topics/db/models/">ORM</a>
 * Sesiones, autenticación y autorización
 * Gestión de email
 * Mensajes
-* GIS
-* Administración automática
+* <a href="http://bebblebrox.files.wordpress.com/2011/01/geodjango-pav-admin.png">GIS</a>
+* <a href="http://django-dynamic-scraper.readthedocs.org/en/latest/_images/screenshot_django-admin_overview.png">Administración automática (y extensible)</a>
+
 
 disponemos de muchos paquetes de 3ros que se instalan con **pip** y
 proveen extensiones, comandos, template tags, vistas genericas, etc.
