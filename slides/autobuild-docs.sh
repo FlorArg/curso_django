@@ -1,6 +1,20 @@
 #!/bin/bash
 
-CMD="landslide config.cfg"
+if [ $# -gt 1 ]; then
+    echo "Este comando solo acepta un argumento"
+    exit
+fi
+
+if [ $# -eq 1 ]; then
+    if [ ! -f $1 ]; then
+        echo "$1 no existe"
+        exit
+    fi
+    CMD="landslide $1"
+else
+    CMD="landslide clase_01.cfg"
+fi
+
 
 function check_installed {
     which $1 >/dev/null

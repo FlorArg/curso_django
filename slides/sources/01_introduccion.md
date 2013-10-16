@@ -20,9 +20,11 @@ diegomvh@gmail.com @diegomvh
 
 6 clases teórico-prácticas de 2hs cada clase.
 
-* Aplicaciones web
-* Lenguaje Python
-* Framework Django
+## Certificados y Aprobación
+
+* Es necesario el 80% de asistencia para certificado de asistencia.
+* Para lograr la aprobación se debe completar un proyecto y *hostearlo* en la nube.
+  *El hosting será provisto por la organización del curso*.
 
 ---
 
