@@ -25,7 +25,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Modelos</title>
+    <title>Introducción al desarrollo de aplicaciones web<br /><small>Utilizando el framework Django</small></title>
     <!-- Styles -->
     
     <style type="text/css" media="print">
@@ -1533,6 +1533,34 @@ r(go);
     </div>
     <div class="slides">
       
+      <!-- slide source: sources/00_titulo.md -->
+      <div class="slide-wrapper">
+        <div class="slide title">
+          <div class="inner">
+            
+            <header><h1>Introducción al desarrollo de aplicaciones web<br /><small>Utilizando el framework Django</small></h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="sources/00_titulo.md">sources/00_titulo.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
       <!-- slide source: sources/04_modelos.md -->
       <div class="slide-wrapper">
         <div class="slide title">
@@ -1555,7 +1583,7 @@ r(go);
             </aside>
             
             <aside class="page_number">
-              1/11
+              2/12
             </aside>
           </footer>
         </div>
@@ -1601,7 +1629,7 @@ de datos no relacionales.</p></section>
             </aside>
             
             <aside class="page_number">
-              2/11
+              3/12
             </aside>
           </footer>
         </div>
@@ -1663,7 +1691,7 @@ de datos no relacionales.</p></section>
             </aside>
             
             <aside class="page_number">
-              3/11
+              4/12
             </aside>
           </footer>
         </div>
@@ -1695,10 +1723,9 @@ de datos no relacionales.</p></section>
 <span class="lineno">16</span>     <span class="n">nombre</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
 <span class="lineno">17</span>     <span class="n">domesticable</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="lineno">18</span> 
-<span class="lineno">19</span> 
-<span class="lineno">20</span> <span class="k">class</span> <span class="nc">Raza</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-<span class="lineno">21</span>     <span class="n">nombre</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-<span class="lineno">22</span>     <span class="n">especie</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Especie</span><span class="p">)</span>
+<span class="lineno">19</span> <span class="k">class</span> <span class="nc">Raza</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="lineno">20</span>     <span class="n">nombre</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="lineno">21</span>     <span class="n">especie</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Especie</span><span class="p">)</span>
 </pre></div>
 </section>
             
@@ -1716,7 +1743,7 @@ de datos no relacionales.</p></section>
             </aside>
             
             <aside class="page_number">
-              4/11
+              5/12
             </aside>
           </footer>
         </div>
@@ -1757,7 +1784,7 @@ de datos no relacionales.</p></section>
             </aside>
             
             <aside class="page_number">
-              5/11
+              6/12
             </aside>
           </footer>
         </div>
@@ -1789,7 +1816,7 @@ de datos no relacionales.</p></section>
             </aside>
             
             <aside class="page_number">
-              6/11
+              7/12
             </aside>
           </footer>
         </div>
@@ -1842,7 +1869,7 @@ de datos no relacionales.</p></section>
             </aside>
             
             <aside class="page_number">
-              7/11
+              8/12
             </aside>
           </footer>
         </div>
@@ -1894,7 +1921,7 @@ de datos no relacionales.</p></section>
             </aside>
             
             <aside class="page_number">
-              8/11
+              9/12
             </aside>
           </footer>
         </div>
@@ -1934,7 +1961,7 @@ nos permite hacer SELECT, INSERT, UPDATE y DELETE muy facilmente.</p>
             </aside>
             
             <aside class="page_number">
-              9/11
+              10/12
             </aside>
           </footer>
         </div>
@@ -1968,7 +1995,7 @@ cuando se recorre por primera vez, se ejecuta la consulta.</p></section>
             </aside>
             
             <aside class="page_number">
-              10/11
+              11/12
             </aside>
           </footer>
         </div>
@@ -1979,8 +2006,10 @@ cuando se recorre por primera vez, se ejecuta la consulta.</p></section>
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Aplicaciones de terceros</h1></header>
+            <header><h1>Migración de modelos - South</h1></header>
             
+            
+            <section><p>algo</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1996,7 +2025,7 @@ cuando se recorre por primera vez, se ejecuta la consulta.</p></section>
             </aside>
             
             <aside class="page_number">
-              11/11
+              12/12
             </aside>
           </footer>
         </div>
@@ -2011,7 +2040,7 @@ cuando se recorre por primera vez, se ejecuta la consulta.</p></section>
       <caption>Table of Contents</caption>
       
       <tr id="toc-row-1">
-        <th><a href="#slide1">Modelos</a></th>
+        <th><a href="#slide1">Introducción al desarrollo de aplicaciones web<br /><small>Utilizando el framework Django</small></a></th>
         <td><a href="#slide1">1</a></td>
       </tr>
       
@@ -2023,56 +2052,62 @@ cuando se recorre por primera vez, se ejecuta la consulta.</p></section>
       
       
       <tr id="toc-row-3">
-        <th><a href="#slide3">Modelos - Campos</a></th>
+        <th><a href="#slide3">Modelos</a></th>
         <td><a href="#slide3">3</a></td>
       </tr>
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide4">Modelos - Ejemplo</a></th>
+        <th><a href="#slide4">Modelos - Campos</a></th>
         <td><a href="#slide4">4</a></td>
       </tr>
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide5">Ejemplos - Contiunación</a></th>
+        <th><a href="#slide5">Modelos - Ejemplo</a></th>
         <td><a href="#slide5">5</a></td>
       </tr>
       
       
       <tr id="toc-row-6">
-        <th><a href="#slide6">Equivalencia en SQL</a></th>
+        <th><a href="#slide6">Ejemplos - Contiunación</a></th>
         <td><a href="#slide6">6</a></td>
       </tr>
       
       
       <tr id="toc-row-7">
-        <th><a href="#slide7">Equivalencia SQL</a></th>
+        <th><a href="#slide7">Equivalencia en SQL</a></th>
         <td><a href="#slide7">7</a></td>
       </tr>
       
       
       <tr id="toc-row-8">
-        <th><a href="#slide8">Modelos - Uso</a></th>
+        <th><a href="#slide8">Equivalencia SQL</a></th>
         <td><a href="#slide8">8</a></td>
       </tr>
       
       
       <tr id="toc-row-9">
-        <th><a href="#slide9">Managers</a></th>
+        <th><a href="#slide9">Modelos - Uso</a></th>
         <td><a href="#slide9">9</a></td>
       </tr>
       
       
       <tr id="toc-row-10">
-        <th><a href="#slide10">Managers (cont)</a></th>
+        <th><a href="#slide10">Managers</a></th>
         <td><a href="#slide10">10</a></td>
       </tr>
       
       
       <tr id="toc-row-11">
-        <th><a href="#slide11">Aplicaciones de terceros</a></th>
+        <th><a href="#slide11">Managers (cont)</a></th>
         <td><a href="#slide11">11</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-12">
+        <th><a href="#slide12">Migración de modelos - South</a></th>
+        <td><a href="#slide12">12</a></td>
       </tr>
       
       

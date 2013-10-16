@@ -90,7 +90,6 @@ de datos no relacionales.
         nombre = models.CharField(max_length=50)
         domesticable = models.BooleanField(default=True)
 
-
     class Raza(models.Model):
         nombre = models.CharField(max_length=50)
         especie = models.ForeignKey(Especie)
@@ -116,8 +115,6 @@ de datos no relacionales.
 ---
 
 # Equivalencia en SQL
-
-
 
 <center>
     <img src="images/sql.gif" style="padding: 20%;">
