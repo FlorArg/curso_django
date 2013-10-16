@@ -112,7 +112,7 @@ div.slide p.cite {
   text-align: right;
 }
 
-div.slide .smallest {
+div.slide.smallest {
   font-size: 80%;
 }
 
@@ -123,11 +123,33 @@ div.slide.bigbullet h3 {
 div.slide.bigbullet ul li {
   font-size: 240%;
 }
+
 div.slide.bigbullet ul li li {
   font-size: 90%;
 }
+
 div.slide.bigbullet ul li small {
   font-size: 50%;
+}
+
+div.slide.smallbullet h3 {
+  font-size: 90%;
+}
+
+div.slide.smallbullet ul li {
+    font-size: 90%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+div.slide.smallbullet ul li li {
+    font-size: 70%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+div.slide.smallbullet ul li small {
+    font-size: 60%;
 }
 
 div.slide.centerquote section {

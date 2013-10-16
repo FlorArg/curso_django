@@ -162,3 +162,190 @@ necesidades.
             urls.py
             wsgi.py
 
+---
+
+# Modelos
+
+.fx: title
+
+---
+
+# Modelos
+
+.fx: smallbullet
+
+Los modelos encapsulan la información referente al dominio de la aplicacion web.
+Compuestos por campos generalemnte cada modelo mapea a una unica tabla de la base de datos.
+
+* Cada modelo es una clase en Python que hereda de django.db.models.Model.
+* Cada atributo del modelo se corresponde con una columna en la base de datos.
+* Con esto Django genera automaticamente una API de acceso a datos.
+
+### Modelo
+
+    !python
+    from django.db import models
+    
+    class Person(models.Model):
+        first_name = models.CharField(max_length=30)
+        last_name = models.CharField(max_length=30)
+
+### SQL
+
+    !sql
+    CREATE TABLE myapp_person (
+        "id" serial NOT NULL PRIMARY KEY,
+        "first_name" varchar(30) NOT NULL,
+        "last_name" varchar(30) NOT NULL
+    );
+
+---
+
+# Modelos - Campos
+
+<div style="float: left; width:50%">
+<h2>Básicos</h2>
+<ul>
+<li>BooleanField</li>
+<li>CharField</li>
+<li>TextField</li>
+<li>IntegerField</li>
+<li>FloatField</li>
+<li>DateTimeField</li>
+</ul>
+<h2>Relaciones</h2>
+<ul>
+<li>ForeignKey</li>
+<li>ManyToManyField</li>
+<li>OneToOneField</li>
+</ul>
+</div>
+
+<div style="float: right; width:50%">
+<h2>Plus</h2>
+<ul>
+<li>EmailField</li>
+<li>DateField</li>
+<li>TimeField</li>
+<li>SlugField</li>
+<li>FileField</li>
+<li>ImageField</li>
+<li>CommaSeparatedIntegerField</li>
+<li>IPAddressField</li>
+<li>UrlField</li>
+</ul>
+
+</div>
+
+---
+
+# Consultas - QuerySets
+
+algo
+
+---
+
+# Migración de modelos - South
+
+algo
+
+---
+
+# Vistas
+
+.fx: title
+
+---
+
+# Vistas
+Class Views
+
+---
+
+# Mapeo de URLs
+
+algo
+
+---
+
+# Plantillas
+Herencia, inclusion
+Template Tags
+Filters
+
+---
+
+# Aplicación de terceras partes - django-extensions
+
+algo
+
+---
+
+# Formularios
+
+.fx: title
+
+---
+
+# Formularios
+Fields
+Widgets
+
+---
+
+# Validación
+Diferentes usos del método clean
+
+---
+
+# Aplicaciones de terceros
+
+.fx: title
+
+---
+
+# Aplicación de terceras partes - Crispy forms
+
+algo
+
+---
+
+# Aplicaciones de terceras partes - Social Auth
+
+algo
+
+---
+
+# Aplicaciones de terceras partes - Celery
+
+algo
+
+---
+
+# Deployment
+
+.fx: title
+
+---
+
+# Buenas prácticas y despliegue de una aplicación
+
+algo
+
+---
+
+# Automatización de deployment y otras tareas mediante fabric.
+
+algo
+
+---
+
+# Diversos esquemas de deployment (puesta en producción).
+
+algo
+
+---
+
+# Integración de supervisor, gunicorn y Apache o Nginx.
+
+algo

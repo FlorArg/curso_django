@@ -2,10 +2,6 @@
 
 .fx: title
 
-# Presenter Notes
-
-Arrancamos
-
 ----
 
 # Bienvenidos
@@ -32,6 +28,7 @@ diegomvh@gmail.com @diegomvh
 
 # Plataforma
 
+.fx: title
 
 ---
 

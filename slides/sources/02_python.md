@@ -158,6 +158,8 @@ Existen muchos recursos en linea donde aprender...
 
 # Gestión de proyectos
 
+.fx: title
+
 ---
 
 ## Paquetes de Python
@@ -183,7 +185,6 @@ La herramienta pip (e *easy_install*) sirven para instalar paquetes
     !bash
 
     sudo pip install django
-
 
 ---
 
