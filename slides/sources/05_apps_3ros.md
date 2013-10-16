@@ -1,4 +1,4 @@
-# Migración de modelos - South
+# Aplicaciones de 3ros
 
 .fx: title
 
@@ -6,7 +6,7 @@
 
 # Por que utilizar aplicaciones de 3ros
 
-Si bien django provee un buen numero de características como
+Si bien django provee un buen número de características como
 
 * <a href="https://docs.djangoproject.com/en/1.5/topics/db/models/">ORM</a>
 * Sesiones, autenticación y autorización
@@ -19,20 +19,17 @@ Si bien django provee un buen numero de características como
 disponemos de muchos paquetes de 3ros que se instalan con **pip** y
 proveen extensiones, comandos, template tags, vistas genericas, etc.
 
-
 ---
-
 
 <img src="images/3ros.gif" style="padding-top: 20%">
 
 <p style="text-align: center;">
-
 Las aplicaciones de terceros ahorran mucho tiempo.
 </p>
 
 ---
 
-# South
+# Migración de modelos - South
 
 ---
 
