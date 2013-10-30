@@ -1,33 +1,3 @@
-# Vistas
-
-.fx: title
-
----
-
-# Vistas
-Class Views
-
----
-
-# Mapeo de URLs
-
-algo
-
----
-
-# Plantillas
-Herencia, inclusion
-Template Tags
-Filters
-
----
-
-# Aplicación de terceras partes - django-extensions
-
-algo
-
----
-
 # Formularios
 
 .fx: title
