@@ -1,15 +1,14 @@
-# Django extensions
+# Aplicaciones de 3ros
 
 .fx: title
 
 ---
 
+# Django extensions
+
+---
+
 # Que es?
-
-Es una coleccion de paneles configurables que presenta mucha informacion de debug
-referida al request/response en curso.
-
-## Que podemos ver dentro de toda esa informacion:
 
 ---
 

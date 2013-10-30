@@ -13,6 +13,14 @@ En su forma mas simple una view es una funcion en Python que recibe el
 **request** como parametro y luego de realizar alguna tarea genera y retorna un 
 objeto **response**.
 
+    !bash
+    mysite/
+        myapp/
+            models.py
+            views.py
+
+Creamos nuestra primera vista
+
     !python
     
     from django.http import HttpResponse
@@ -75,8 +83,3 @@ Importamos include
         url(r'^myapp/', include('myapp.urls')),
         url(r'^admin/', include(admin.site.urls)),
     )
-
----
-
-# Class Views
-
