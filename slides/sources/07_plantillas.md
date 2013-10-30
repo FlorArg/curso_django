@@ -29,7 +29,7 @@ Creamos un template en **templates/myapp/index.html**
     {% if modelos %}
         <ul>
         {% for modelo in modelos %}
-            <li>{{ modelo }}</a></li>
+            <li>{{ modelo }}</li>
         {% endfor %}
         </ul>
     {% else %}
