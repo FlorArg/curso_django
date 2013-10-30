@@ -35,8 +35,7 @@ Estos módulos definen como se mapean las URL (expresiones regulares) a funcione
     !bash
     mysite/
         myapp/
-            __init__.py
-            models.py
+            ...
             views.py
             urls.py  <--- Agregamos
 
@@ -52,6 +51,32 @@ En url.py argeamos la tupla que mapea la url en nuestra view
         url(r'^(\w+)$', views.index, name='index')
     )
 
+---
+
+# Incluir URLs
+
+Luego de crear un modulo al nivel de aplicacion el próximo paso es incluirlo
+en el URLconf raíz.
+
+    !bash
+    mysite/
+        myapp
+        mysite/
+            ...
+            settings.py
+            urls.py  <---- URLconf raíz
+
+Importamos include
+
+    !python
+    from django.conf.urls import patterns, include
+       
+    urlpatterns = patterns('',
+        url(r'^myapp/', include('myapp.urls')),
+        url(r'^admin/', include(admin.site.urls)),
+    )
+
+---
 
 # Class Views
 
