@@ -5,7 +5,14 @@ from django.db import models
 
 class Persona(models.Model):
     nombre = models.CharField(max_length=50)
-
+    apellido = models.CharField(max_length=50)
+    MASCULINO = 'm'
+    FEMENINO = 'f'
+    SEXO_CHOICES = (
+        (MASCULINO, 'Masculino'), (FEMENINO, 'Femenino')
+    )
+    sexo = models.CharField(max_length=1, choices=SEXO_CHOICES)
+    
 class Mascota(models.Model):
     # Constantes
     MACHO, HEMBRA = 'm', 'h'
