@@ -1,32 +1,22 @@
 from django.db import models
 
-# Create your models here.
 class Persona(models.Model):
-    nombre = models.CharField(
-                max_length=50,
-                blank=True,
-                null=True)
-    apellido = models.CharField(
-            max_length=50,
-            blank=True,
-            null=True,
-            )
-    MASCULINO = 'm'
-    FEMENINO = 'f'
+    nombre = models.CharField(max_length=50)
+
+class Mascota(models.Model):
+    # Constantes
+    MACHO, HEMBRA = 'm', 'h'
     SEXO_CHOICES = (
-        (MASCULINO, 'Masculino'),
-        (FEMENINO, 'Femenino'),
+        (MACHO, 'Macho'), (HEMBRA, 'Hembra')
     )
-    sexo = models.CharField(
-            max_length=1,
-            blank=True,
-            null=True,
-            choices=SEXO_CHOICES,
-    )
+    duenio = models.ForeignKey(Persona, null=True, blank=True)
+    raza = models.ForeignKey('Especie') # Relación hacia adelante
+    sexo = models.CharField(max_length=1, choices=SEXO_CHOICES)
 
-    def __unicode__(self):
-        return "%s %s" % (self.nombre, self.apellido)
+class Especie(models.Model):
+    nombre = models.CharField(max_length=50)
+    domesticable = models.BooleanField(default=True)
 
-class Auto(models.Model):
-    duenio = models.ForeignKey(Persona)
-    modelo = models.IntegerField()
+class Raza(models.Model):
+    nombre = models.CharField(max_length=50)
+    especie = models.ForeignKey(Especie)
