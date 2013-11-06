@@ -93,3 +93,33 @@ Importamos include
         url(r'^myapp/', include('myapp.urls')),
         url(r'^admin/', include(admin.site.urls)),
     )
+
+---
+
+# Obteniendo información de la URL
+
+Utilizando expresiones regulares se pueden asociar
+partes de la URL a parámetros de la URL.
+
+    !python
+
+    from views import listado_historico
+
+    urlpatterns = patterns('',
+        url(r'^listado_historico/(\d{4})-(\d{1,2})(\d{1,2})',
+        listado_historico, name='listado_historico'),
+    )
+
+y la vista
+
+    !python
+
+    from datetime import date
+
+    def listado_historico(request, anio, mes, dia):
+        try:
+            fecha = date(int(fecha), int(mes), int(dia))
+        except ValueError:
+            return HttpResponseRedirect('..')
+        Publicaciones.objects.filter(fecha=fecha)
+        # Retornar algo útil...
