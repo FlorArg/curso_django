@@ -13,16 +13,21 @@ En su forma mas simple una view es una **funcion** en Python que recibe el
 **request** como parametro y luego de realizar alguna tarea genera y retorna un
 objeto **response**.
 
+
+<img src="images/vistas.png">
+
 ---
 
 # Dónde se encuentran
 
 La convensión es guardar las vistas de cada aplicación en un archivo llamado *views.py*
+
     !bash
     mysite/
         myapp/
             models.py
             views.py
+
 
 Creamos nuestra primera vista
 
