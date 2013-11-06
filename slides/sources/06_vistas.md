@@ -123,3 +123,14 @@ y la vista
             return HttpResponseRedirect('..')
         Publicaciones.objects.filter(fecha=fecha)
         # Retornar algo útil...
+
+---
+
+# Cómo generar las URLs?
+
+## Kodos
+
+Kodos permite depurar expresiones regulares
+
+
+<img src="images/kodos.png">
