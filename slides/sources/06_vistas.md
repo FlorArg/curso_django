@@ -5,14 +5,19 @@
 ---
 
 # Vistas
-Basicamente una vista o view es un "tipo" de página web en nuestra aplicación, 
+Basicamente una vista o view es un "tipo" de página web en nuestra aplicación,
 generalmente provee una función específica. Generalmente tiene una plantilla
 asociada.
 
-En su forma mas simple una view es una funcion en Python que recibe el
-**request** como parametro y luego de realizar alguna tarea genera y retorna un 
+En su forma mas simple una view es una **funcion** en Python que recibe el
+**request** como parametro y luego de realizar alguna tarea genera y retorna un
 objeto **response**.
 
+---
+
+# Dónde se encuentran
+
+La convensión es guardar las vistas de cada aplicación en un archivo llamado *views.py*
     !bash
     mysite/
         myapp/
@@ -22,7 +27,7 @@ objeto **response**.
 Creamos nuestra primera vista
 
     !python
-    
+
     from django.http import HttpResponse
 
     def index(request, nombre):
@@ -48,13 +53,13 @@ Estos módulos definen como se mapean las URL (expresiones regulares) a funcione
             urls.py  <--- Agregamos
 
 En url.py argeamos la tupla que mapea la url en nuestra view
-            
+
     !python
-    
+
     from django.conf.urls import patterns, url
-    
+
     from myapp import views
-    
+
     urlpatterns = patterns('',
         url(r'^(\w+)$', views.index, name='index')
     )
@@ -78,7 +83,7 @@ Importamos include
 
     !python
     from django.conf.urls import patterns, include
-       
+
     urlpatterns = patterns('',
         url(r'^myapp/', include('myapp.urls')),
         url(r'^admin/', include(admin.site.urls)),
