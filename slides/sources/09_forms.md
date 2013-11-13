@@ -1,3 +1,4 @@
+
 # Medios estaticos
 
 Se llaman medios estáticos a todos los archivos que Django *no* genera:
@@ -232,14 +233,43 @@ Y luego se importan en las vistas.
         """Esta vista utiliza un fomrulario"""
         if request.method == "GET":
             form = BusquedaForm()
+            mascotas = Mascota.objects.none()
         else:
             form = BusquedaForm(request.POST)
             if form.is_valid():
-                Mascoa
+                mi_campo = form.cleaned_data['mi_campo']
+                mascotas = Mascota.objects.filter(nombre=mi_campo)
         return render_to_response("common/busqueda.html", {
-            'form': form
+            'form': form,
+            'mascotas': mascotas
             })
 
+---
+
+# Template
+
+    !html
+
+    {% extends base.html %}
+
+    {% block content %}
+        <h1>Búsqueda</h1>
+        <form action="GET">
+            {% crsf_token %}
+            {{ form }}
+        </form>
+        <h2>Resultados</h2>
+        {% if mascotas %}
+            <ul>
+            {% for mascota in mascotas %}
+                <li>{{ mascota.nombre }}</li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            Sin resultados.
+        {% endif %}
+
+    {% endblock content%}
 
 ---
 
@@ -247,11 +277,83 @@ Y luego se importan en las vistas.
 
 La validación ocurre de la siguiente menra:
 
-    1) Se llama al método clean de cada field
-    2) Se llama al método
+## Se llama al método clean de cada field
+Validación básica del tipo de dato.
+
+## Se llama al método clean_NOMBRE_FIELD si existe en el form
+
+    !python
+    class ContactForm(forms.Form):
+        destinatarios = MultiEmailField()
+
+        def clean_destinatarios(self):
+            data = self.cleaned_data['destinatarios']
+            if "pepe@example.com" not in data:
+                raise forms.ValidationError("Te olvidaste de pepe!")
+            # Siempre retornar data
+            return data
+
+---
+
+# Validación (2)
+
+## Se llama al método clean del form
+
+    !python
+
+    class ContactForm(forms.Form):
+        asunto = forms.CharField(max_length=100)
+        mensaje = forms.CharField()
+        emisor = forms.EmailField()
+        destinatario = MultiEmailField()
+        con_copia = forms.BooleanField(required=False)
+
+        def clean(self):
+            cleaned_data = super(ContactForm, self).clean()
+            con_copia = cleaned_data.get("con_copia")
+            asunto = cleaned_data.get("asunto ")
+
+            if con_copia and asunto:
+                if "ayuda" not in asunto:
+                    raise forms.ValidationError("No pidas 'ayuda' sin "
+                            "incluirte con copia.")
+            return cleaned_data
+
+
+<a href="https://docs.djangoproject.com/en/1.5/ref/forms/validation/"
+target="_blank">
+    Documentación sobre validación en Django
+</a>
 
 ---
 
 # ModelForms
 
-Los modelform se generan de manera automática
+Los modelform utilizan la propiedad Meta para definir a que modelo referencia:
+
+    !python
+
+    from models import Mascota
+
+    class MascotaForm(forms.ModelForm):
+
+        class Meta:
+            model = Mascota
+
+Y tiene el método **save()** que genera una instancia del modelo.
+
+    !python
+
+    def alsta_mascota(request):
+        if request.moethod == 'GET':
+            form = MascotaForm()
+        else:
+            form = MascotaForm(request.POST)
+            if form.is_valid():
+                form.save()
+                # Todo OK :)
+                return HttpResponeRedirect('..')
+            return render_to_response('common/alta_mascota.html', {
+                'form': form
+                })
+
