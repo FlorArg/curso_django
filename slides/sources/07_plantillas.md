@@ -37,17 +37,16 @@ Creamos un template en **templates/myapp/index.html**
     {% endif %}
 
 Modificamos la vista *index* en **myapp/views.py**
-    
+
     !python
     from django.http import HttpResponse
     from django.template import Context, loader
     from myapp.models import Modelo
-    
-    def index(request):
-        template = loader.get_template('myapp/index.html')
-        context = Context({ 'modelos': Modelo.objects.all() })
-        return HttpResponse(template.render(context))
+    from django.shortcuts import render_to_response
 
+    def index(request):
+        context = {'modelos': Modelo.objects.all()}
+        return render_to_response('myapp/index.html', context)
 ---
 
 # Herencia esqueleto
@@ -86,7 +85,7 @@ herencia redefinir bloques o partes de ese esqueleto.
     {% extends "base.html" %}
 
     {% block title %}Mi super sitio{% endblock %}
-    
+
     {% block content %}
     {% for modelo in modelos %}
         <h2>{{ modelo.titulo }}</h2>
