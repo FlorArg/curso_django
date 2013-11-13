@@ -1,3 +1,60 @@
+# Medios estaticos
+
+Se llaman medios estáticos a todos los archivos que Django *no* genera:
+
+# Imagenes
+# CSS
+Establece el estilo del las páginas.
+
+# JavaScript
+Permite dar compoartamiento en el cliente como widgets, validaciones, AJAX, etc.
+
+---
+
+# Dónde se ubican
+
+Los medios estáticos se configuran en el archivo settings.py
+
+    !python
+
+    # Archivos subidos por el usuario
+    MEDIA_ROOT = 'static/media' # Debería ser una ruta absoluta
+                                # (ver os.path)
+
+    MEDIA_URL = '/static/media' #
+    # URL para el resto de los archivos estático
+    STATIC_URL = '/static/'
+    # Archivos de la admin
+    ADMIN_MEDIA_PREFIX = '/static/admin/'
+
+    STATICFILES_DIRS = (
+        'static'
+    )
+    # Donde se guardan los archivos en producción
+    # (Ver collectstatic)
+    STATIC_ROOT = 'static_files' # Esta se usa en producción
+
+En producción revisar <a
+target="_blank"
+href="https://docs.djangoproject.com/en/1.5/howto/static-files/">
+este link</a>.
+
+---
+
+# Uso de archivos estáticos en los templates
+
+En los templates existe un templatetag que birnada el tag **static**.
+
+    {% load static %}
+
+    <img src="{% static "common/img.png" %}">
+
+Esto nos independiza de la ubicación absoluta del archivo en el sistema de archivos.
+
+
+
+---
+
 # Estructura de templates
 
 ---
@@ -30,7 +87,7 @@ El template *padre* puede tener la seiguiente estrcutra
 
     !html
     <!-- myproject/templates/base.html -->
-    {% load static %}
+    {% load staticfiles %}
     <html>
         <head>
             <title>{{ title }}</title>
@@ -134,7 +191,7 @@ Permite agegar información, por ejemplo, en los ModelForm, el modelo asociado.
 ## Una clase Media
 
 Permite definir JavaScript y CSS asociado al formulario. Al momento de pasrlo
-al template, se hay que incluir {{ form.media }}
+al template, se hay que incluir  {{ form.media }}
 
 ---
 
