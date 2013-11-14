@@ -46,7 +46,7 @@ este link</a>.
 
 En los templates existe un templatetag que birnada el tag **static**.
 
-    {% load static %}
+    {% load staticfiles %}
 
     <img src="{% static "common/img.png" %}">
 
