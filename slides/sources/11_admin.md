@@ -27,7 +27,14 @@ myproject/urls.py
 
 ---
 
-# Registrar Modelos
+# Modelos
+
+    !python
+    
+    mascotas.register(Persona)
+    mascotas.register(Mascota)
+    mascotas.register(Especie)
+    mascotas.register(Raza)
 
 ---
 
