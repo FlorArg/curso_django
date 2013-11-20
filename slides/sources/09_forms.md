@@ -344,7 +344,7 @@ Y tiene el método **save()** que genera una instancia del modelo.
 
     !python
 
-    def alsta_mascota(request):
+    def alta_mascota(request):
         if request.moethod == 'GET':
             form = MascotaForm()
         else:
