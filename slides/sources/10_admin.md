@@ -103,7 +103,7 @@ defineindolos específicamente para el sitio:
     from django.contrib import admin
 
     class MiSitioAdministrativo(admin.AdminSite):
-        index_template = None
+         index_template = None
         app_index_template = None
 
 Recordar que se puede investigar con la consola interactiva:
@@ -137,40 +137,25 @@ con una clase de ModelAdmin dónde se indican opciones:
 
 # Columnas personalizadas
 
-En la clase ModelAdmin se pueden definir métodos para el listado:
+Además de las columnas de la base de datos
+---
 
-    !python
-    # myproject/common/admin.py
-
-    from django.contrib import admin
-
-    class MascotaAdmin(admin.ModelAdmin):
-        list_display = ('nombre', 'sexo', 'get_especie_domesticable')
-
-        def get_especie_domesticable(self, instancia):
-            return instancia.especie.domesticable
-        get_especie_domesticable.short_description = "Es domesticable?"
+# Ordenamiento de columnas personazliadas
 
 ---
 
 # Filtrando por atributos relacionados
 
-    !python
-    class MascotaAdmin(admin.ModelAdmin):
-        list_filter = ('nombre', 'sexo', 'get_especie_domesticable')
 
+---
+# Filtrando resultados
 
 
 ---
-# Lo que vamos a ver en la documentación
+# Acciones
 
-## Metodos útiles
+---
+# Urls personalizadas
 
-### get_form
-### get_queryset
-
-## Inlines
-
-## Acciones
-
-## Urls personalizadas
+---
+# Inlines
