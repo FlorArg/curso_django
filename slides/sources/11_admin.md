@@ -174,3 +174,23 @@ En la clase ModelAdmin se pueden definir métodos para el listado:
 ## Acciones
 
 ## Urls personalizadas
+
+
+---
+
+# Señales
+
+Son el quivalente a triggers de base de datos pero a nivel ORM. Sin embargo, existen
+muchos otros usos.
+
+Algunas muy usadas son:
+
+### pre_save
+
+### post_save
+
+### pre_delete
+
+### post_delete
+
+### <a href="https://docs.djangoproject.com/en/dev/topics/signals/" target="_blank">entre otras</a>

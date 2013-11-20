@@ -14,7 +14,7 @@ class Mascota(models.Model):
     )
     nombre = models.CharField(max_length=50)
     duenio = models.ForeignKey(Persona, null=True, blank=True)
-    raza = models.ForeignKey('Especie') # Relación hacia adelante
+    especie = models.ForeignKey('Especie') # Relación hacia adelante
     sexo = models.CharField(max_length=1, choices=SEXO_CHOICES)
 
 
