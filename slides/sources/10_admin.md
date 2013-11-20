@@ -120,8 +120,16 @@ Recordar que se puede investigar con la consola interactiva:
 
 # Modificando las columnas
 
-Para modificar columnas, es necesario cambiar instruir a la administración que
-queremos una administración especial para un modelo
+Para modificar columnas, es necesario registrar el modelo
+con una clase de ModelAdmin dónde se indican opciones:
+
+    !python
+    # myproject/common/admin.py
+
+    from django.contrib import admin
+
+    class MascotaAdmin(admin.ModelAdmin):
+        list_display = ('nombre', 'sexo',)
 
 
 
