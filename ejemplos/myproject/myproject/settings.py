@@ -87,8 +87,8 @@ SECRET_KEY = '#u534wss4v%7cfj48@q-lra%4p%-@#jhhsjxx(#oylmm_hx4n%'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
+    'django.template.loaders.filesystem.Loader',
 #     'django.template.loaders.eggs.Loader',
 )
 
@@ -100,6 +100,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+
 )
 
 ROOT_URLCONF = 'myproject.urls'
@@ -127,6 +129,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'common',
     'asistencia',
+    'debug_toolbar',
     'south',
 )
 
@@ -160,3 +163,5 @@ LOGGING = {
         },
     }
 }
+
+INTERNAL_IPS = ('127.0.0.1', )

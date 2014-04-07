@@ -6,6 +6,10 @@ from django.db import models
 class Persona(models.Model):
     nombre = models.CharField(max_length=50)
 
+    def __unicode__(self):
+        return self.nombre
+
+
 class Mascota(models.Model):
     # Constantes
     MACHO, HEMBRA = 'm', 'h'
@@ -24,6 +28,9 @@ class Mascota(models.Model):
 class Especie(models.Model):
     nombre = models.CharField(max_length=50)
     domesticable = models.BooleanField(default=True)
+
+    def __unicode__(self):
+        return self.nombre
 
 class Raza(models.Model):
     nombre = models.CharField(max_length=50)

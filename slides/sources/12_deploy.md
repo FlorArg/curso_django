@@ -12,6 +12,11 @@ de las siguientes estapas:
 # Estructura típica
 
 
+<embed src="images/deployment_structure.svg" type="image/svg+xml" />
+
+----
+
+
     Browser
      |
      +-+-+-+-+-
@@ -72,23 +77,24 @@ que indican de una manera automatizada como:
 # fabfile.py
 
 Fabric es un sistema de automatización de tareas en python de manera local y remota
-(mediante SSH).
+(mediante SSH). Cada tarea **es una función python**.
+
+Las tareas deben ser funciones dentro de un archivo llamado fabfile.py:
+
 
 Un archivo fabfile básico consiste en:
 
     !python
-
     from fabric.api import env, local, run, task
-
     # Configurar la vairable env
 
     @task
-    def listar_archivos():
-        local('ls')
+    def tarea_local():
+        local('echo hola')
 
     @task
-    def subir_archivos():
-        put('ruta_local', 'ruta_remota')
+    def tarea_remota():
+        run('echo hola')
 
 Luego la ejecución es simple como
 
@@ -97,6 +103,66 @@ Luego la ejecución es simple como
     fab listar_archivos
 
 
+---
+# Deployando con fabric
+
+Fabric tiene los siguientes comandos básicos:
+
+**fabric.api.run('comando')** ejecuta en el servidor
+
+**fabric.api.local('comando')** ejecuta en nuestra máquina
+
+**fabric.api.put('fuente', 'destino')** ejecuta en nuestra máquina
+
+**fabric.api.local('fuente', 'destino')** ejecuta en nuestra máquina
+
+
+---
+# Creando un fabfile
+
+Para la comunicación remota es necesaria cierta configuración en la
+variable **env**.
+
+    !python
+    from fabric.api import *
+
+    env.user = 'gscalone'
+    env.home = "/home/%s" % env.user
+    env.project = 'myproject'
+    env.project_dir = '/home/{user}/websites/{project}'.format(**env)
+    env.venv_prefix = ('source /home/{user}/.virtualenvs/'
+                      '{project}/bin/activate').format(**env)
+    env.hosts = ['buscopartido.com.ar']
+    env.use_ssh_config = True
+
+
+---
+
+    !python
+
+    @task
+    def instalar_proyecto():
+
+        # run('mkdir -p ~/websites/{project}'.format(
+        #     **env))
+        local('pip freeze >requirements.txt')
+        put('requirements.txt',
+            '~/websites/{project}/requirements.txt'.format(
+            **env))
+        run('mkvirtualenv {project}'.format(
+            **env))
+        with cd(env.project_dir):
+            with prefix(env.venv_prefix):
+                run('pip install -r requirements.txt')
+
+---
+
+    !python
+    @task
+    def runserver(puerto=8888):
+        with cd(env.project_dir):
+            with prefix(env.venv_prefix):
+                run('python manage.py runserver 0:{}'.format(puerto))
 
 ---
 # Como seguimos?
